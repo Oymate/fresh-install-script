@@ -31,25 +31,25 @@ sleep 2
 clear
 
 echo "---------------------------------"
-echo "Restoring files from ExtraDrive1"
+echo "Restoring files from Backup"
 echo "---------------------------------"
 
 # Setting username for path logic
 read -p 'Username: ' uservar
 
 echo "--------------------------------"
-echo "Mounting your ExtraDrive1"
+echo "Mounting your Backup"
 echo "--------------------------------"
 
-sudo mount /media/$uservar/ExtraDrive1
-sudo mount /dev/sda1 /media/$uservar/ExtraDrive1
+sudo mount /media/$uservar/Backup
+sudo mount /dev/sdb1 /media/$uservar/Backup
 
-cp -r /media/$uservar/ExtraDrive1/Backups/Pictures/* /home/$uservar/Pictures/
-cp -r /media/$uservar/ExtraDrive1/Backups/Documents/* /home/$uservar/Documents/
-cp -r /media/$uservar/ExtraDrive1/Backups/.ssh/* /home/$uservar/.ssh/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/i3/* /home/$uservar/.config/i3/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/i3status/* /home/$uservar/.config/i3status/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/sway/* /home/$uservar/.config/sway/
+cp -r /media/$uservar/Backup/Pictures/* /home/$uservar/Pictures/
+cp -r /media/$uservar/Backup/Documents/* /home/$uservar/Documents/
+cp -r /media/$uservar/Backup/.ssh/* /home/$uservar/.ssh/
+cp -r /media/$uservar/Backup/.config/i3/* /home/$uservar/.config/i3/
+cp -r /media/$uservar/Backup/.config/i3status/* /home/$uservar/.config/i3status/
+cp -r /media/$uservar/Backup/.config/sway/* /home/$uservar/.config/sway/
 
 # Communication Tools
 # --------------------
