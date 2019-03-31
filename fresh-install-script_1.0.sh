@@ -31,26 +31,26 @@ sleep 2
 clear
 
 echo "---------------------------------"
-echo "Restoring files from ExtraDrive1"
+echo "Restoring files from Steam-Library"
 echo "---------------------------------"
 
 # Setting username for path logic
 read -p 'Username: ' uservar
 
 echo "--------------------------------"
-echo "Mounting your ExtraDrive1"
+echo "Mounting your Steam-Library"
 echo "--------------------------------"
 
-sudo mount /media/$uservar/ExtraDrive1
-sudo mount /dev/sda1 /media/$uservar/ExtraDrive1
+sudo mount /media/$uservar/Steam-Library
+sudo mount /dev/sda1 /media/$uservar/Steam-Library
 
-cp -r /media/$uservar/ExtraDrive1/Backups/Pictures/* /home/$uservar/Pictures/
-cp -r /media/$uservar/ExtraDrive1/Backups/Documents/* /home/$uservar/Documents/
-cp -r /media/$uservar/ExtraDrive1/Backups/Videos/* /home/$uservar/Videos/
-cp -r /media/$uservar/ExtraDrive1/Backups/.ssh/* /home/$uservar/.ssh/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/i3/* /home/$uservar/.config/i3/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/i3status/* /home/$uservar/.config/i3status/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/sway/* /home/$uservar/.config/sway/
+cp -r /media/$uservar/Steam-Library/Backups/Pictures/* /home/$uservar/Pictures/
+cp -r /media/$uservar/Steam-Library/Backups/Documents/* /home/$uservar/Documents/
+cp -r /media/$uservar/Steam-Library/Backups/Videos/* /home/$uservar/Videos/
+cp -r /media/$uservar/Steam-Library/Backups/.ssh/* /home/$uservar/.ssh/
+cp -r /media/$uservar/Steam-Library/Backups/.config/i3/* /home/$uservar/.config/i3/
+cp -r /media/$uservar/Steam-Library/Backups/.config/i3status/* /home/$uservar/.config/i3status/
+cp -r /media/$uservar/Steam-Library/Backups/.config/sway/* /home/$uservar/.config/sway/
 
 # Communication Tools
 # --------------------
