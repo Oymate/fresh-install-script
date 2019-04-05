@@ -30,13 +30,6 @@ sudo -k apt upgrade
 sleep 2
 clear
 
-echo "---------------------------------"
-echo "Restoring files from ExtraDrive1"
-echo "---------------------------------"
-
-# Setting username for path logic
-read -p 'Username: ' uservar
-
 echo "--------------------------------"
 echo "Mounting your ExtraDrive1"
 echo "--------------------------------"
@@ -44,13 +37,23 @@ echo "--------------------------------"
 sudo mount /media/$uservar/ExtraDrive1
 sudo mount /dev/sda1 /media/$uservar/ExtraDrive1
 
-cp -r /media/$uservar/ExtraDrive1/Backups/Pictures/* /home/$uservar/Pictures/
-cp -r /media/$uservar/ExtraDrive1/Backups/Documents/* /home/$uservar/Documents/
-cp -r /media/$uservar/ExtraDrive1/Backups/Videos/* /home/$uservar/Videos/
-cp -r /media/$uservar/ExtraDrive1/Backups/.ssh/* /home/$uservar/.ssh/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/i3/* /home/$uservar/.config/i3/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/i3status/* /home/$uservar/.config/i3status/
-cp -r /media/$uservar/ExtraDrive1/Backups/.config/sway/* /home/$uservar/.config/sway/
+echo "---------------------------------"
+echo "Restoring files from ExtraDrive1"
+echo "---------------------------------"
+
+# Setting username for path logic
+read -p 'Username: ' uservar
+
+# Setting location
+read -p 'Mount: ' mountvar
+
+cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Pictures/* /home/$uservar/Pictures/
+cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Documents/* /home/$uservar/Documents/
+cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Videos/* /home/$uservar/Videos/
+cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.ssh/* /home/$uservar/.ssh/
+cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.config/i3/* /home/$uservar/.config/i3/
+cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.config/i3status/* /home/$uservar/.config/i3status/
+cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.config/sway/* /home/$uservar/.config/sway/
 
 # Communication Tools
 # --------------------
