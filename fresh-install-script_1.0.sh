@@ -52,6 +52,19 @@ cp -r /media/$uservar/Steam-Library/Backups/.config/i3/* /home/$uservar/.config/
 cp -r /media/$uservar/Steam-Library/Backups/.config/i3status/* /home/$uservar/.config/i3status/
 cp -r /media/$uservar/Steam-Library/Backups/.config/sway/* /home/$uservar/.config/sway/
 
+echo "---------------------------------------------"
+echo "Would you like to install some applications?"
+echo "#1 will exit the script and #2 will continue"
+echo "---------------------------------------------"
+echo -n "Enter choice: "; read appchoice
+case "$appchoice" in
+1) exit 1
+    ;;
+2) echo "Continuing";;
+ esac
+ sleep 1
+ clear
+
 # Communication Tools
 # --------------------
 echo "-------------------------------"
@@ -94,12 +107,25 @@ esac
 sleep 1
 clear
 
+echo "---------------------------------------------"
+echo "Would you like to install development tools?"
+echo "#1 will exit the script and #2 will continue"
+echo "---------------------------------------------"
+echo -n "Enter choice: "; read devchoice
+case "$devchoice" in
+1) exit 1
+    ;;
+2) echo "Continuing";;
+ esac
+ sleep 1
+ clear
+
 # Random useful tools
 # -------------------
 echo "-------------------------------"
 echo "Installing some tools"
 echo ""
-echo "fish (gcc, make, g++, libncurses5), virtualbox and Chrome, Tilix"
+echo "fish (gcc, make, g++, libncurses5), virtualbox and Chrome."
 echo "-------------------------------"
 echo ""
 sudo apt install gcc make g++ libncurses5-dev
