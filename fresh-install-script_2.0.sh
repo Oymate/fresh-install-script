@@ -43,9 +43,11 @@ echo "---------------------------------"
 
 # Setting username for path logic
 read -p 'Username: ' uservar
+clear
 
 # Setting location
 read -p 'Mount: ' mountvar
+clear
 
 cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Pictures/* /home/$uservar/Pictures/
 cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Documents/* /home/$uservar/Documents/
