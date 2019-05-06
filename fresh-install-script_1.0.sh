@@ -30,9 +30,9 @@ sudo -k apt upgrade
 sleep 2
 clear
 
-echo "---------------------------------"
+echo "-----------------------------------"
 echo "Restoring files from Steam-Library"
-echo "---------------------------------"
+echo "-----------------------------------"
 
 # Setting username for path logic
 read -p 'Username: ' uservar
@@ -44,18 +44,29 @@ echo "--------------------------------"
 sudo mount /media/$uservar/Steam-Library
 sudo mount /dev/sda1 /media/$uservar/Steam-Library
 
-cp -r /media/$uservar/Steam-Library/Backups/Pictures/* /home/$uservar/Pictures/
-cp -r /media/$uservar/Steam-Library/Backups/Documents/* /home/$uservar/Documents/
-cp -r /media/$uservar/Steam-Library/Backups/Videos/* /home/$uservar/Videos/
-cp -r /media/$uservar/Steam-Library/Backups/.bashrc /home/$uservar/
-mkdir /home/$uservar/.ssh
-cp -r /media/$uservar/Steam-Library/Backups/.ssh/* /home/$uservar/.ssh/
-mkdir /home/$uservar/.config/i3
-cp -r /media/$uservar/Steam-Library/Backups/.config/i3/* /home/$uservar/.config/i3/
-mkdir /home/$uservar/.config/i3status
-cp -r /media/$uservar/Steam-Library/Backups/.config/i3status/* /home/$uservar/.config/i3status/
-mkdir /home/$uservar/.config/sway
-cp -r /media/$uservar/Steam-Library/Backups/.config/sway/* /home/$uservar/.config/sway/
+#cp -r /media/$uservar/Steam-Library/Backups/Pictures/* /home/$uservar/Pictures/
+#cp -r /media/$uservar/Steam-Library/Backups/Documents/* /home/$uservar/Documents/
+#cp -r /media/$uservar/Steam-Library/Backups/Videos/* /home/$uservar/Videos/
+#cp -r /media/$uservar/Steam-Library/Backups/.bashrc /home/$uservar/
+#mkdir /home/$uservar/.ssh
+#cp -r /media/$uservar/Steam-Library/Backups/.ssh/* /home/$uservar/.ssh/
+#mkdir /home/$uservar/.config/i3
+#cp -r /media/$uservar/Steam-Library/Backups/.config/i3/* /home/$uservar/.config/i3/
+#mkdir /home/$uservar/.config/i3status
+#cp -r /media/$uservar/Steam-Library/Backups/.config/i3status/* /home/$uservar/.config/i3status/
+#mkdir /home/$uservar/.config/sway
+#cp -r /media/$uservar/Steam-Library/Backups/.config/sway/* /home/$uservar/.config/sway/
+
+tar -xzvf /media/$uservar/Steam-Library/Backups/Pictures.tar.gz 
+cp -r /media/$uservar/Steam-Library/Backups/home/aaronhoneycutt/Pictures/* /home/$uservar/Pictures/
+
+tar -xzvf /media/$uservar/Steam-Library/Backups/Documents.tar.gz 
+cp -r /media/$uservar/Steam-Library/Backups/home/aaronhoneycutt/Documents/* /home/$uservar/Documents/
+
+tar -xzvf /media/$uservar/Steam-Library/Backups/config-files.tar.gz 
+cp -r /media/$uservar/Steam-Library/Backups/home/aaronhoneycutt/.config/* /home/$uservar/.config/
+
+rm -r home/*
 
 echo "---------------------------------------------"
 echo "Would you like to install some applications?"
