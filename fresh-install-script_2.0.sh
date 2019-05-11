@@ -49,14 +49,14 @@ clear
 read -p 'Mount: ' mountvar
 clear
 
-tar -xzvf /media/$uservar/ExtraDrive1/Backups/Pictures.tar.gz 
-cp -r /media/$uservar/ExtraDrive1/Backups/home/aaronhoneycutt/Pictures/* /home/$uservar/Pictures/
+tar -xzvf /media/$uservar/ExtraDrive1/Backups/Pictures.tar.gz
+cp -r home/aaronhoneycutt/Pictures/* /home/$uservar/Pictures/
 
-tar -xzvf /media/$uservar/ExtraDrive1/Backups/Documents.tar.gz 
-cp -r /media/$uservar/ExtraDrive1/Backups/home/aaronhoneycutt/Documents/* /home/$uservar/Documents/
+tar -xzvf /media/$uservar/ExtraDrive1/Backups/Documents.tar.gz
+cp -r home/aaronhoneycutt/Documents/* /home/$uservar/Documents/
 
 tar -xzvf /media/$uservar/ExtraDrive1/Backups/config-files.tar.gz 
-cp -r /media/$uservar/ExtraDrive1/Backups/home/aaronhoneycutt/.config/* /home/$uservar/.config/
+cp -r home/aaronhoneycutt/.config/* /home/$uservar/.config/
 
 echo "---------------------------------------------"
 echo "Would you like to install some applications?"
