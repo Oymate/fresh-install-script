@@ -49,13 +49,14 @@ clear
 read -p 'Mount: ' mountvar
 clear
 
-cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Pictures/* /home/$uservar/Pictures/
-cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Documents/* /home/$uservar/Documents/
-cp -r /$mountvar/$uservar/ExtraDrive1/Backups/Videos/* /home/$uservar/Videos/
-cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.ssh/* /home/$uservar/.ssh/
-cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.config/i3/* /home/$uservar/.config/i3/
-cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.config/i3status/* /home/$uservar/.config/i3status/
-cp -r /$mountvar/$uservar/ExtraDrive1/Backups/.config/sway/* /home/$uservar/.config/sway/
+tar -xzvf /media/$uservar/ExtraDrive1/Backups/Pictures.tar.gz 
+cp -r /media/$uservar/ExtraDrive1/Backups/home/aaronhoneycutt/Pictures/* /home/$uservar/Pictures/
+
+tar -xzvf /media/$uservar/ExtraDrive1/Backups/Documents.tar.gz 
+cp -r /media/$uservar/ExtraDrive1/Backups/home/aaronhoneycutt/Documents/* /home/$uservar/Documents/
+
+tar -xzvf /media/$uservar/ExtraDrive1/Backups/config-files.tar.gz 
+cp -r /media/$uservar/ExtraDrive1/Backups/home/aaronhoneycutt/.config/* /home/$uservar/.config/
 
 echo "---------------------------------------------"
 echo "Would you like to install some applications?"
