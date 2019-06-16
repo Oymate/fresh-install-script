@@ -131,13 +131,13 @@ case "$devchoice" in
 echo "-------------------------------"
 echo "Installing some tools"
 echo ""
-echo "(gcc, make, g++, libncurses5), and Chrome"
+echo "(gcc, make, g++, libncurses5), and tilix"
 echo "-------------------------------"
 echo ""
-sudo apt install gcc make g++ libncurses5-dev
+sudo apt install gcc make g++ libncurses5-dev tilix
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # Fixing dep issues
 # and removing old packages
@@ -149,7 +149,7 @@ echo "-------------------------------------"
 echo ""
 sudo apt -f install
 sudo apt autoremove
-rm google-chrome-stable_current_amd64.deb
+#rm google-chrome-stable_current_amd64.deb
 clear
 
 echo "---------------------------------"
