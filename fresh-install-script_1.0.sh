@@ -1,6 +1,9 @@
 #!/bin/bash
 # Intro
 # -------------
+
+day=$(date +%Y-%m-%d)
+
 clear
 echo "------------------------------------------------------------------"
 echo "Welcome to version 2.0 of the FIS"
@@ -44,7 +47,7 @@ echo "--------------------------------"
 sudo mount /media/$uservar/Backup
 sudo mount /dev/sdb1 /media/$uservar/Backup
 
-cp -r /media/$uservar/Backup/Pictures/* /home/$uservar/Pictures/
+cp -r /media/$uservar/Backup/$day/Pictures-$day.tar.gz /home/$uservar/Pictures/
 cp -r /media/$uservar/Backup/Documents/* /home/$uservar/Documents/
 cp -r /media/$uservar/Backup/.ssh/* /home/$uservar/.ssh/
 cp -r /media/$uservar/Backup/.config/i3/* /home/$uservar/.config/i3/
