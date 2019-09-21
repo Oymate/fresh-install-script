@@ -47,12 +47,9 @@ echo "--------------------------------"
 sudo mount /media/$uservar/Backup
 sudo mount /dev/sdb1 /media/$uservar/Backup
 
-cp -r /media/$uservar/Backup/$day/Pictures-$day.tar.gz /home/$uservar/Pictures/
-cp -r /media/$uservar/Backup/Documents/* /home/$uservar/Documents/
-cp -r /media/$uservar/Backup/.ssh/* /home/$uservar/.ssh/
-cp -r /media/$uservar/Backup/.config/i3/* /home/$uservar/.config/i3/
-cp -r /media/$uservar/Backup/.config/i3status/* /home/$uservar/.config/i3status/
-cp -r /media/$uservar/Backup/.config/sway/* /home/$uservar/.config/sway/
+tar -xf /media/$uservar/Backup/$day/Pictures-$day.tar.gz /home/$uservar/Pictures/
+tar -xf /media/$uservar/Backup/$day/Documents-$day.tar.gz /home/$uservar/Documents/
+tar -xf /media/$uservar/Backup/$day/config-files-$day.tar.gz /home/$uservar/.config/
 
 echo "---------------------------------------------"
 echo "Would you like to install some applications?"
