@@ -5,38 +5,24 @@ clear
 echo "------------------------------------------------------------------"
 echo "Welcome to version 2.0 of the FIS"
 distro="$(cat /etc/os-release | awk -F "\"" '/PRETTY_NAME/ {print $2}')"
-echo "Welcome to your fresh" "${distro}"
+echo "This installation is" "${distro}"
 echo "------------------------------------------------------------------"
 sleep 2
 clear
 
-echo "--------------------------------"
-echo "Mounting your Backup"
-echo "--------------------------------"
-
-sudo mount /media/$uservar/Backup
-sudo mount /dev/sda1 /media/$uservar/Backup
-
 echo "---------------------------------"
 echo "Restoring files from Backup"
 echo "---------------------------------"
+sleep 2
 
-# Setting username for path logic
-read -p 'Username: ' uservar
-clear
+tar -xzvf ~/Backup-Drive/Pictures.tar.gz
+cp -r home/aaronhoneycutt/Pictures/* ~/Pictures/
 
-# Setting location
-read -p 'Mount: ' mountvar
-clear
+tar -xzvf ~/Backup-Drive/Documents.tar.gz
+cp -r home/aaronhoneycutt/Documents/* ~/Documents/
 
-tar -xzvf /media/$uservar/Backup/Pictures.tar.gz
-cp -r home/aaronhoneycutt/Pictures/* /home/$uservar/Pictures/
-
-tar -xzvf /media/$uservar/Backup/Documents.tar.gz
-cp -r home/aaronhoneycutt/Documents/* /home/$uservar/Documents/
-
-tar -xzvf /media/$uservar/Backup/config-files.tar.gz 
-cp -r home/aaronhoneycutt/.config/* /home/$uservar/.config/
+tar -xzvf ~/Backup-Drive/config-files.tar.gz 
+cp -r home/aaronhoneycutt/.config/* ~/.config/
 
 echo "---------------------------------------------"
 echo "Would you like to install some applications?"
