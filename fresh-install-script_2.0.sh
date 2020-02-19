@@ -26,13 +26,13 @@ cp -r home/aaronhoneycutt/.config/* ~/.config/
 
 echo "---------------------------------------------"
 echo "Would you like to install some applications?"
-echo "#1 will exit the script and #2 will continue"
+echo "#0 will exit the script and #1 will continue"
 echo "---------------------------------------------"
 echo -n "Enter choice: "; read appchoice
 case "$appchoice" in
-1) exit 1
+0) exit 1
     ;;
-2) echo "Continuing";;
+1) echo "Continuing";;
  esac
  sleep 1
  clear
@@ -101,13 +101,13 @@ clear
 
 echo "---------------------------------------------"
 echo "Would you like to install development tools?"
-echo "#1 will exit the script and #2 will continue"
+echo "#0 will exit the script and #1 will continue"
 echo "---------------------------------------------"
 echo -n "Enter choice: "; read devchoice
 case "$devchoice" in
-1) exit 1
+0) exit 1
     ;;
-2) echo "Continuing";;
+1) echo "Continuing";;
  esac
  sleep 1
  clear
