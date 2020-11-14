@@ -9,9 +9,6 @@ Options
 Restores the following directories:
 - Pictures
 - Documents
-- .ssh
-- i3, i3status
-- sway
 
 # Communication Tools
 - Telegram
@@ -22,8 +19,7 @@ Restores the following directories:
 - All
 
 # Dev Tools
-- Downloads Fish 3.0.0 release, installs dependencies, compiles it and sets it as the default shell.
-- Downloads and installs virtualbox latest release. (6.0 as of this update)
+- fish, virtualbox, gcc, make, g++, libcurses5-dev
 
 Future ideas:
 
